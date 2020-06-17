@@ -1,0 +1,29 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: slategray;
+}
+
+.messages {
+    padding: 20px 0px 0px 40px;
+}
+
+.messages .message {
+    padding: 5px;
+}
+.userDialog a {
+    color: black;
+    text-decoration: none;
+}
+.userDialog .dialog {
+    padding: 10px;
+    border: 1px solid darkgreen;
+}
+
+.userDialog .activeDialog {
+    color: gold;
+}
+
+.messageuser {
+    text-align: right;
+}

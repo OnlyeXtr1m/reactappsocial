@@ -1,0 +1,10 @@
+.content {
+    grid-area: content;
+    background-color: slategray;
+    margin-right: 10px;
+}
+
+.background {
+    background-attachment: scroll;
+    width: 100%;
+}

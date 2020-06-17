@@ -1,0 +1,17 @@
+.nav {
+  grid-area: nav;
+  background-color: darkslategray;
+  padding-top: 20px;
+
+}
+li {
+  list-style-type: none;
+}
+.item a {
+  color: lime;
+  text-decoration: none;
+}
+
+.item a.activeLink {
+  color: yellow;
+}
