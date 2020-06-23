@@ -2,7 +2,7 @@ import React from "react";
 import s from "./../Dialogs.module.css"
 import UserMessages from "./UserMessages/UserMessages";
 import CompanionMessages from "./CompanionMessages/CompanionMessages";
-import {newMessageAreaActionCreator, newMessageSentActionCreator} from "../../../../redux/dialogs-reducer";
+
 
 
 
@@ -18,14 +18,14 @@ const Messages = (props) => {
         props.onAddMessage()
     }
 
-    let userMessagesElements = props.state.messagesUser.map( message => <UserMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
-    let companionMessagesElements = props.state.messagesCompanion.map( message => <CompanionMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
+    let userMessagesElements = props.messagesData.messagesUser.map( message => <UserMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
+    let companionMessagesElements = props.messagesData.messagesCompanion.map( message => <CompanionMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
 
     return (
         <div className={s.message}>
             {userMessagesElements}
             {companionMessagesElements}
-            <textarea onChange={changeMessageText} ref={newMessageElement} value={props.state.messagesTextArea}></textarea>
+            <textarea onChange={changeMessageText} ref={newMessageElement} value={props.messagesData.messagesTextArea}></textarea>
             <button onClick={ addMessage }>Add message</button>
         </div>
     );
