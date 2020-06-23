@@ -8,24 +8,25 @@ import {newMessageAreaActionCreator, newMessageSentActionCreator} from "../../..
 
 const Messages = (props) => {
 
-    let NewMessageElement = React.createRef();
-    let AddMessage = () => {
-        props.dispatch(newMessageSentActionCreator());
-    };
+    let newMessageElement = React.createRef();
 
     let changeMessageText = () => {
-        props.dispatch(newMessageAreaActionCreator(NewMessageElement.current.value));
+        props.onChangeMessageText(newMessageElement.current.value);
     };
 
-    let UserMessagesElements = props.state.messagesUser.map( message => <UserMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
-    let CompanionMessagesElements = props.state.messagesCompanion.map( message => <CompanionMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
+    let addMessage = () => {
+        props.onAddMessage()
+    }
+
+    let userMessagesElements = props.state.messagesUser.map( message => <UserMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
+    let companionMessagesElements = props.state.messagesCompanion.map( message => <CompanionMessages id={message.id} message={message.message} dateTime = {message.pubDate}/>)
 
     return (
         <div className={s.message}>
-            {UserMessagesElements}
-            {CompanionMessagesElements}
-            <textarea onChange={changeMessageText} ref={NewMessageElement} value={props.state.messagesTextArea}></textarea>
-            <button onClick={ AddMessage }>Add message</button>
+            {userMessagesElements}
+            {companionMessagesElements}
+            <textarea onChange={changeMessageText} ref={newMessageElement} value={props.state.messagesTextArea}></textarea>
+            <button onClick={ addMessage }>Add message</button>
         </div>
     );
 };
