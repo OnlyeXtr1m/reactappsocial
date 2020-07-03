@@ -7,6 +7,7 @@ import Dialogs from "./components/Content/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import Feed from "./components/Content/Feed/Feed";
 import Photos from "./components/Content/Photos/Photos";
+import UsersContainer from "./components/Content/Users/UsersContainer";
 
 
 
@@ -18,6 +19,7 @@ const App = (props) => {
             <div>
                 <Route path='/messages' render={ () => <Dialogs store={props.store} />} />
                 <Route path='/profile' render={ () => <Profile store={props.store}/>} />
+                <Route path='/users' render={ () => <UsersContainer store={props.store}/> } />
                 <Route path='/feed' render={ () => <Feed />} />
                 <Route path='/photos' render={ () => <Photos/>} />
             </div>

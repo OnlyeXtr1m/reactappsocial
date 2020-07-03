@@ -1,0 +1,37 @@
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.users {
+    display: block;
+    background-color: darkslategrey;
+}
+
+.usersList {
+    padding: 10px;
+    display: flex;
+}
+
+.button {
+    width: 100%;
+}
+
+.information {
+    margin-left: 20px;
+    background-color: slategray;
+    width: 100%;
+}
+
+.name_and_status {
+    font-size: 20px;
+}
+
+.location {
+    display: flex;
+    font-size: 10px;
+}
+
+.status {
+    color: darkslategrey;
+}
