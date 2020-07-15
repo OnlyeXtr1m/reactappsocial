@@ -1,6 +1,6 @@
 .header {
   grid-area: header;
-  background-color: black;
+  background-color: royalblue;
   position: sticky;
   top: 0;
 }

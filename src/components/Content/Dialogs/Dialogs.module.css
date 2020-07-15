@@ -1,7 +1,8 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    background-color: slategray;
+    background-color: #6495ED08;
+    position: relative;
 }
 
 .messages {
@@ -12,16 +13,17 @@
     padding: 5px;
 }
 .userDialog a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .userDialog .dialog {
     padding: 10px;
-    border: 1px solid darkgreen;
+    border: 1px solid lightgray;
+    background-color: royalblue;
 }
 
-.userDialog .activeDialog {
-    color: gold;
+.userDialog .dialog .activeDialog {
+    color: goldenrod;
 }
 
 .messageuser {

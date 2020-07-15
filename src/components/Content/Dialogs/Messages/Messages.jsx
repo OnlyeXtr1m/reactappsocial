@@ -25,8 +25,8 @@ const Messages = (props) => {
         <div className={s.message}>
             {userMessagesElements}
             {companionMessagesElements}
-            <textarea onChange={changeMessageText} ref={newMessageElement} value={props.messagesData.messagesTextArea}></textarea>
-            <button onClick={ addMessage }>Add message</button>
+            <textarea className={s.messagesTextArea} onChange={changeMessageText} ref={newMessageElement} value={props.messagesData.messagesTextArea}></textarea>
+            <button className={s.buttonSendMessage} onClick={ addMessage }>Add message</button>
         </div>
     );
 };

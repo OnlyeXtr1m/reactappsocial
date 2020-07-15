@@ -3,14 +3,13 @@ import styles from "./users.module.css";
 import * as axios from "axios";
 import userPhoto from "../../../assets/user.jpg"
 
-let Users = (props) => {
+class User extends React.Component {
 
-    if (props.users.length === 0) {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {props.setUsers(response.data.items)})
-    }
-    return <div className={styles.users}>
-        {
-            props.users.map(u => <div key={u.id} className={styles.usersList}>
+    render() {
+
+        return <div className={styles.users}>
+            {
+                props.users.map(u => <div key={u.id} className={styles.usersList}>
             <span>
                 <div>
                     <img src={u.photos.small ? u.photos.small : userPhoto} className={styles.avatar}/>
@@ -21,7 +20,7 @@ let Users = (props) => {
                         : <button className={styles.button} onClick={ () => { props.follow(u.id) }} >Follow</button>}
                 </div>
             </span>
-                <span className={styles.information}>
+                    <span className={styles.information}>
                     <span className={styles.name_and_status}>
                         <div>{u.name}</div>
                         <div className={styles.status}>{u.status}</div>
@@ -31,9 +30,10 @@ let Users = (props) => {
                         </div>
 
                 </span>
-            </div>)
-        }
-    </div>
-};
+                </div>)
+
+    }
+
+}
 
 export default Users

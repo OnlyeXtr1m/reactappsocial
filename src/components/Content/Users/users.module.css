@@ -5,7 +5,7 @@
 
 .users {
     display: block;
-    background-color: darkslategrey;
+    background-color: royalblue;
 }
 
 .usersList {
@@ -19,7 +19,7 @@
 
 .information {
     margin-left: 20px;
-    background-color: slategray;
+    background-color: white;
     width: 100%;
 }
 
