@@ -18,7 +18,7 @@ const Posts = (props) => {
 
     return(<div className={s.posts}>
             <div>
-                <textarea onChange={newTextInArea} ref={newPostElement} value={props.postsTextArea} placeholder="ПЕРЕПИШИ МЕНЯ, МРАЗ!!!!"></textarea>
+                <textarea onChange={newTextInArea} ref={newPostElement} value={props.postsTextArea} placeholder="Enter your message here"></textarea>
             </div>
             <div>
                 <button onClick={addPost}>Add post</button>
